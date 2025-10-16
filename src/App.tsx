@@ -136,9 +136,9 @@ export default function DevsOnTreesLanding() {
                 A personal holding and long-term project. The idea is simple: a place in Galicia to write code, plant tomatoes and host tech team offsites. This page collects the things I've been building.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <Badge className="rounded-full bg-white/10 text-neutral-200">Galicia</Badge>
-                <Badge className="rounded-full" style={{ backgroundColor: `${BRAND}33`, color: BRAND }}>Nature × Neon</Badge>
-                <Badge className="rounded-full bg-cyan-500/20 text-cyan-300">Builder notes</Badge>
+                <Badge className="rounded-full bg-white/10 text-neutral-200">Coding</Badge>
+                <Badge className="rounded-full" style={{ backgroundColor: `${BRAND}33`, color: BRAND }}>Tomatoes</Badge>
+                <Badge className="rounded-full bg-cyan-500/20 text-cyan-300">Galicia</Badge>
               </div>
             </div>
             <div className="relative">

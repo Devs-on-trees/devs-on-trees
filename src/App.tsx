@@ -268,7 +268,7 @@ export default function DevsOnTreesLanding() {
   );
 }
 
-function Feature({ icon: Icon, title, text }: { icon: React.ElementType; title: string; text: string }) {
+export function Feature({ icon: Icon, title, text }: { icon: React.ElementType; title: string; text: string }) {
   // Allow Icon to be either a lucide icon component OR our DevsLogo component
   const IconEl = (props: React.SVGProps<SVGSVGElement>) => (Icon === DevsLogo ? <DevsLogo size={18} {...props} /> : <Icon {...props} />);
   return (

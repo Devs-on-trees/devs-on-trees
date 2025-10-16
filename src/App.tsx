@@ -51,7 +51,7 @@ const projects = [
     tag: "Coding Copilot",
     blurb:
       "Opinionated, context-first AI framework that works for production environments.",
-    href: "#",
+    href: "https://bazingai.xyz",
     icon: Bot,
     accent: "from-sky-400 to-violet-400",
   },
@@ -133,7 +133,7 @@ export default function DevsOnTreesLanding() {
                 Devs on Trees
               </motion.h1>
               <p className="mt-4 max-w-prose text-neutral-300">
-                My personal holding and long-term project. The idea is simple: a quiet place in Galicia to write code and, sometimes, host team offsites. This page explains the idea and lists the things I've been building.
+                A personal holding and long-term project. The idea is simple: a place in Galicia to write code, plant tomatoes and host tech team offsites. This page collects the things I've been building.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Badge className="rounded-full bg-white/10 text-neutral-200">Galicia</Badge>
@@ -151,7 +151,7 @@ export default function DevsOnTreesLanding() {
                     </span>
                     <div>
                       <p className="text-sm text-neutral-300">Place</p>
-                      <p className="text-xs text-neutral-400">Quiet rooms, decent coffee, stable internet.</p>
+                      <p className="text-xs text-neutral-400">Great food, decent weather, stable internet.</p>
                     </div>
                   </div>
                   <div className="rounded-2xl border border-white/10 p-5">
@@ -159,7 +159,7 @@ export default function DevsOnTreesLanding() {
                       <MapPin className="h-4 w-4" /> Galicia, Spain
                     </div>
                     <div className="mt-3 text-sm text-neutral-400">
-                      A Casa Rural. When it’s ready, I’ll use it half the season for deep work and the other half to host a few teams.
+                      A Casa Rural. When it’s ready, it will be a place for friends and family to code and plant tomatoes.
                     </div>
                     <div className="mt-4 flex items-center gap-2 text-xs text-neutral-400">
                       <Calendar className="h-4 w-4" /> Opening timeline: TBD
@@ -173,7 +173,7 @@ export default function DevsOnTreesLanding() {
       </section>
 
       {/* About (simple) */}
-      <section id="about" className="relative border-y border-white/10 bg-neutral-950/60">
+      {/* <section id="about" className="relative border-y border-white/10 bg-neutral-950/60">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="grid gap-10 md:grid-cols-3">
             <div className="md:col-span-2">
@@ -195,10 +195,10 @@ export default function DevsOnTreesLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Notes / Vision */}
-      <section id="vision" className="relative">
+      {/* <section id="vision" className="relative">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <div>
@@ -229,7 +229,7 @@ export default function DevsOnTreesLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects (plain list, no marketing) */}
       <section id="projects" className="relative border-y border-white/10 bg-gradient-to-b from-neutral-950 to-neutral-950">
@@ -254,10 +254,10 @@ export default function DevsOnTreesLanding() {
         <div className="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-400">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p>© {new Date().getFullYear()} Devs on Trees.</p>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <a href="#projects" className="hover:text-neutral-200">Projects</a>
               <a href="#vision" className="hover:text-neutral-200">Notes</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

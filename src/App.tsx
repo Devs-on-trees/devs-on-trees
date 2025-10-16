@@ -1,5 +1,6 @@
 import './App.css'
 import { useMemo } from "react";
+import * as React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -74,7 +75,7 @@ const projects = [
   },
 ];
 
-function BookmarkIcon(props) {
+function BookmarkIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`h-5 w-5 ${props.className ?? ""}`} {...props}>
       <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
@@ -109,7 +110,7 @@ export default function DevsOnTreesLanding() {
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100" style={{ userSelect: "text" }}>
       {/* Hero (no header, no CTAs, with inline logo) */}
-      <section className="relative overflow-hidden selection:bg-[--brand]/30 selection:text-white" style={{ ['--brand']: BRAND }}>
+      <section className="relative overflow-hidden selection:bg-[--brand]/30 selection:text-white" style={{ '--brand': BRAND } as React.CSSProperties}>
         <NeonGrid />
         <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-24">
           <div className="grid items-center gap-12 md:grid-cols-2">
@@ -267,9 +268,9 @@ export default function DevsOnTreesLanding() {
   );
 }
 
-function Feature({ icon: Icon, title, text }) {
+function Feature({ icon: Icon, title, text }: { icon: React.ElementType; title: string; text: string }) {
   // Allow Icon to be either a lucide icon component OR our DevsLogo component
-  const IconEl = (props) => (Icon === DevsLogo ? <DevsLogo size={18} {...props} /> : <Icon {...props} />);
+  const IconEl = (props: React.SVGProps<SVGSVGElement>) => (Icon === DevsLogo ? <DevsLogo size={18} {...props} /> : <Icon {...props} />);
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
       <div className="flex items-center gap-3">
@@ -285,7 +286,7 @@ function Feature({ icon: Icon, title, text }) {
   );
 }
 
-function ProjectCard({ name, tag, blurb, href, icon: Icon, accent }) {
+function ProjectCard({ name, tag, blurb, href, icon: Icon, accent }: { name: string; tag: string; blurb: string; href: string; icon: React.ElementType; accent: string }) {
   return (
     <Card className="group relative overflow-hidden rounded-3xl border-white/10 bg-white/5 transition hover:border-white/20">
       <div className={`pointer-events-none absolute -inset-1 opacity-0 blur-2xl transition group-hover:opacity-30 bg-gradient-to-br ${accent}`} />
@@ -322,7 +323,7 @@ function SmokeTests() {
     results.push({ name: "icons-defined", pass: [Bot, Cpu, Shield, Users, LinkIcon, MapPin, Calendar].every(Boolean) });
     results.push({ name: "no-header", pass: !HAS_HEADER });
     results.push({ name: "no-contact", pass: !HAS_CONTACT });
-    resfults.push({ name: "no-cta", pass: !HAS_CTA });
+    results.push({ name: "no-cta", pass: !HAS_CTA });
   } catch (e) {
     results.push({ name: "runtime-error", pass: false, message: String(e) });
   }
